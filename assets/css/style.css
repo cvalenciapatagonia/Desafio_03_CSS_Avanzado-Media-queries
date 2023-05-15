@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Brygada 1918", serif;
+}
+
+.more:hover {
+  background-color: #5eb2a6;
+  color: white;
+  border: solid grey 1px;
+}
+
+.btns:hover {
+  background-color: #12223d;
+  color: white;
+  border: solid grey 1px;
+  cursor: pointer;
+}
+
+/*?----------------------- MOBILE-VERSION ------------------------ */
+
+.grid-container {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "filtro"
+    "main"
+    "angles"
+    "footer";
+  grid-template-rows: 1fr 1fr 10fr 1fr 1.5fr;
+}
+
+/* -------------------- MENU DE NAVEGACION -----------------------*/
+
+nav {
+  grid-area: navbar;
+  background-color: #12223d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 3.5em;
+}
+
+/* ---------------------FILTRO DE BUSQUEDA -----------------------*/
+section {
+  grid-area: filtro;
+  background-color: #5eb2a6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.order-text {
+  margin-bottom: 0.2em;
+  color: white;
+  font-weight: bold;
+}
+
+select {
+  width: 15em;
+  margin-bottom: 0.5em;
+}
+
+/* ---------------------SECCION PRINCIPAL------------------------*/
+main {
+  grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+  text-align: center;
+}
+
+.card {
+  height: 25em;
+  width: 17em;
+  background-color: white;
+  border: solid #cccaca 1px;
+  border-radius: 5%;
+}
+
+.product-img {
+  height: 20em;
+  margin-top: 0.5em;
+}
+
+.card-title {
+  margin-bottom: 0.3em;
+  margin-top: 0.6em;
+}
+
+.angles {
+  grid-area: angles;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin-top: 0;
+  background-color: whitesmoke;
+}
+
+.btns {
+  height: 2em;
+  width: 2em;
+  border: solid #cccaca 1px;
+}
+
+.more{
+  font-family: "Brygada 1918", serif;
+}
+
+/* ---------------------------FOOTER-----------------------------*/
+footer {
+  grid-area: footer;
+  background-color: #12223d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+i {
+  color: white;
+  margin-right: 1em;
+}
+
+.footer-txt {
+  color: white;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.btn1,
+.more,
+.iconf,
+.toggler,
+li:hover {
+  cursor: pointer;
+}
+
+.desktop {
+  display: none;
+}
+
+/*?----------------------- DESKTOP-VERSION ------------------------ */
+@media (min-width: 992px) {
+  .grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+      "navbar filter"
+      "navbar main"
+      "navbar main"
+      "footer angles";
+
+    grid-template-rows: 1fr 7fr 1fr 1fr;
+    grid-template-columns: 1fr 6fr;
+  }
+
+  /* -------------------- MENU DE NAVEGACION -----------------------*/
+  nav {
+    grid-area: navbar;
+    background-color: #12223d;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .logo {
+    height: 4em;
+    margin-top: 1em;
+  }
+
+  ul {
+    color: white;
+    list-style-type: none;
+    margin-top: 2em;
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    margin: 0 2em 1em 0;
+  }
+
+  li:hover {
+    background-color: white;
+    color: #12223d;
+    width: 100%;
+  }
+
+  /* ---------------------FILTRO DE BUSQUEDA -----------------------*/
+  section {
+    grid-area: filter;
+    background-color: #5eb2a6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .order-text {
+    color: white;
+    margin-top: 2em;
+  }
+
+  .toggler {
+    display: none;
+  }
+
+  select {
+    height: 2em;
+    width: 80em;
+  }
+
+  /* ---------------------SECCION PRINCIPAL------------------------*/
+  main {
+    display: flex;
+    grid-area: main;
+    background-color: whitesmoke;
+    text-align: center;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1em;
+    margin-top: 1em;
+  }
+
+  .card {
+    height: 22em;
+    width: 15em;
+    background-color: white;
+    border: solid #cccaca 1px;
+    border-radius: 5%;
+  }
+
+  .product-img {
+    height: 16em;
+    margin-top: 0.5em;
+  }
+
+  .card-title {
+    margin: 0.3em 0 0.6em;
+  }
+
+  .btns {
+    height: 2em;
+    width: 2em;
+    border: solid #cccaca 1px;
+  }
+
+  /* ---------------------------FOOTER-----------------------------*/
+  footer {
+    grid-area: footer;
+    background-color: #020b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+  }
+
+  .desktop {
+    display: inline;
+  }
+
+  .iconf {
+    margin-right: 0.3em;
+  }
+
+  nav .toggler {
+    display: none;
+  }
+}
