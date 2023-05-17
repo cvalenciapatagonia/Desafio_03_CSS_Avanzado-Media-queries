@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Brygada 1918", serif;
+  height: 100vh;
 }
 
 .more:hover {
@@ -28,7 +29,7 @@ body {
     "main"
     "angles"
     "footer";
-  grid-template-rows: 1fr 1fr 10fr 1fr 1.5fr;
+  grid-template-rows: 1fr 1fr 11fr 6fr 1fr;
 }
 
 /* -------------------- MENU DE NAVEGACION -----------------------*/
@@ -77,15 +78,16 @@ main {
 }
 
 .card {
-  height: 25em;
+  height: 24em;
   width: 17em;
   background-color: white;
   border: solid #cccaca 1px;
   border-radius: 5%;
+  margin: 1em 0 1em 0;
 }
 
 .product-img {
-  height: 20em;
+  height: 19em;
   margin-top: 0.5em;
 }
 
@@ -99,8 +101,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: start;
-  margin-top: 0;
   background-color: whitesmoke;
+  padding-bottom: 1em;
 }
 
 .btns {
@@ -124,17 +126,19 @@ footer {
 }
 
 i {
+  padding-top: 1em;
   color: white;
   margin-right: 1em;
+  padding-bottom: em;
 }
 
 .footer-txt {
   color: white;
   margin: 0;
   font-size: 0.8em;
+  padding-bottom: 1em;
 }
 
-.btn1,
 .more,
 .iconf,
 .toggler,
@@ -147,7 +151,7 @@ li:hover {
 }
 
 /*?----------------------- DESKTOP-VERSION ------------------------ */
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .grid-container {
     height: 100vh;
     display: grid;
@@ -156,7 +160,6 @@ li:hover {
       "navbar main"
       "navbar main"
       "footer angles";
-
     grid-template-rows: 1fr 7fr 1fr 1fr;
     grid-template-columns: 1fr 6fr;
   }
